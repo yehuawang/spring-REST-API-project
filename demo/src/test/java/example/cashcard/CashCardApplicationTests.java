@@ -1,4 +1,4 @@
-package example.cashcard;
+package test.java.example.cashcard;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
