@@ -44,21 +44,4 @@ test {
     }
 }
 
-// Add this section to generate the bin folder for both main and test compiled classes
-tasks.withType(JavaCompile) {
-    // Set custom directory for compiled classes
-    destinationDirectory = file("$buildDir/bin/${it.name.contains('Test') ? 'test' : 'main'}")
-}
 
-task copyMainClasses(type: Copy) {
-    from compileJava.destinationDirectory
-    into "$buildDir/bin/main"
-}
-
-task copyTestClasses(type: Copy) {
-    from compileTestJava.destinationDirectory
-    into "$buildDir/bin/test"
-}
-
-compileJava.finalizedBy(copyMainClasses)
-compileTestJava.finalizedBy(copyTestClasses)
