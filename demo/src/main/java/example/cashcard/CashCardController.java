@@ -1,4 +1,4 @@
-package main.java.example.cashcard;
+package example.cashcard;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
